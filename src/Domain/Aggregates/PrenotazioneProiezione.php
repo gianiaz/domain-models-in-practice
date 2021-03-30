@@ -1,9 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace DDD\Domain\Aggregates;
 
-
+use DDD\Domain\Events\Evento;
 use DDD\Domain\Events\PostoNonRiservato;
 use DDD\Domain\Events\PostoRiservato;
 use DDD\Domain\ValueTypes\Cliente;
@@ -12,16 +13,15 @@ use DDD\Domain\ValueTypes\Proiezione;
 
 class PrenotazioneProiezione
 {
-
     public function __construct(
         private StatoPrenotazione $statoPrenotazione
     ) {
     }
 
     /**
-     * @param callable(Event):void $publish
+     * @param callable(Evento):void $publish
      */
-    public function reserve(callable $publish, Proiezione $proiezione, Posto $posto, Cliente $cliente): void
+    public function prenota(callable $publish, Proiezione $proiezione, Posto $posto, Cliente $cliente): void
     {
         if ($this->postoGiaRiservato($proiezione, $posto)) {
             $publish(new PostoNonRiservato($proiezione, $posto));
@@ -40,6 +40,4 @@ class PrenotazioneProiezione
 
         return false;
     }
-
-
 }

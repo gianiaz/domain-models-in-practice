@@ -1,15 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace DDD\Domain\ValueTypes;
-
 
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
 abstract class UUIDObject
 {
-
     private UuidInterface $uuid;
 
     public function __construct(string $uuid = null)
@@ -28,5 +27,4 @@ abstract class UUIDObject
     {
         return $this->uuid->toString();
     }
-
 }
