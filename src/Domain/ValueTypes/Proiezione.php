@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace DDD\Domain\ValueTypes;
 
 
-class Proiezione
+class Proiezione extends UUIDObject
 {
 
 }
