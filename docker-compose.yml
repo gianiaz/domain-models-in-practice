@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+  php:
+    image: gianiaz-domain-models-in-practice/php
+    build:
+      context: docker
+    volumes:
+    - .:/var/www/ddd

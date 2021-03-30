@@ -1,0 +1,16 @@
+docker-compose.override.yml
+vendor
+
+### JetBrains template
+*.iml
+.idea/
+
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
