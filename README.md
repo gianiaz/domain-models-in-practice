@@ -1,3 +1,3 @@
-#Domain models in practice
+# Domain models in practice
 
 Cinemarcos Quality Reservation System - A prototypical PHP implementation
