@@ -14,7 +14,7 @@ use DDD\Domain\ValueTypes\Proiezione;
 class PrenotazioneProiezione
 {
     public function __construct(
-        private StatoPrenotazione $statoPrenotazione
+        private StatoPrenotazioneProiezione $statoPrenotazione
     ) {
     }
 

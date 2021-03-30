@@ -10,7 +10,7 @@ use DDD\Domain\Events\ProiezioneProgrammata;
 use DDD\Domain\ValueTypes\Posto;
 use DDD\Domain\ValueTypes\Proiezione;
 
-class StatoPrenotazione
+class StatoPrenotazioneProiezione
 {
     /**
      * @var array<string,Posto[]>
